@@ -3,6 +3,9 @@ node("master") {
 		checkout scm
 	}
 	stage("build") {
-		echo "Test"
+		echo "app.java:1:SEVERE:Error found"
+	}
+	stage("analysis") {
+		warnings canComputeNew: false, canResolveRelativePaths: false, categoriesPattern: '', consoleParsers: [[parserName: 'Example Parser']], defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', messagesPattern: '', unHealthy: ''
 	}
 }
