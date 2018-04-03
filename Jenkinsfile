@@ -1,4 +1,4 @@
-@Library('demo-lib') _
+@Library('demo-lib@master') _
 
 node("master") {	
 	stage("checkout") {
