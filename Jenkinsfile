@@ -6,6 +6,7 @@ node("master") {
 	}
 	stage("build") {
 		warningLib.create("Something went wrong")
+		recordLabels.list("master")
 	}
 	stage("analysis") {
 		warnings canComputeNew: false, canResolveRelativePaths: false, categoriesPattern: '', consoleParsers: [[parserName: 'Example parser']], defaultEncoding: '', excludePattern: '', healthy: '', includePattern: '', messagesPattern: '', unHealthy: ''
